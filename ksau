@@ -92,6 +92,7 @@ refresh() {
         return
     fi
     sudo mv rclone.conf ~/.config/rclone/rclone.conf
+    sudo chown -R $USER ~/.config/rclone
     echo "${lightgreen}rclone config updated successfully.${normal}"
 }
 
