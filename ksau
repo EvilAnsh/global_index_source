@@ -85,6 +85,7 @@ sanity_checks() {
 
 refresh() {
     echo "${aqua}Downloading latest rclone config${normal}"
+    rm -rf rclone.conf && rm -rf ~/.config/rclone/rclone.conf
     wget https://gist.githubusercontent.com/hakimifr/aabebeea8c1ce0c5a6968fc0d78ed5ae/raw/rclone.conf -O rclone.conf &>/dev/null
     if [ "$?" -ne 0 ]; then
         echo "Config download failed!"
