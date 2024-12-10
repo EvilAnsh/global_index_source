@@ -90,7 +90,7 @@ refresh() {
         echo "Config download failed!"
         return
     fi
-    mv rclone.conf ~/.config/rclone/rclone.conf
+    sudo mv rclone.conf ~/.config/rclone/rclone.conf
     echo "${lightgreen}rclone config updated successfully.${normal}"
 }
 
